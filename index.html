@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailor Portfolio</title>
+  <style>
+  *{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f8f8;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .profile {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #111;
+    }
+    .gallery {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .album {
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .album:hover {
+      transform: translateY(-5px);
+    }
+    .album img {
+      width: 100%;
+      border-radius: 8px;
+display:block;
+margin-bottom:0.5rem;  
+  }
+    .album h3 {
+background-color:#2c3e50;
+color:white;
+padding:10px 16px;
+border-radius: 8px;
+text-align:center;
+font-size:1rem;
+cursor:pointer;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+transition: background-color0.3s ease;
+      
+
+    }
+	
+	.album h3:hover{
+	background-color: #1a252f;
+	}
+    .album-photos {
+      display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	  gap:0.5rem;
+      margin-top: 0.5rem;
+    }
+    .album-photos img {
+      width: 100%;
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+      color: white;
+    
+}
+    button {
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+@media(max-width: 600px){
+.gallery{
+grid-template-columns:1fr;
+
+}
+.album-photos{
+grid-template-columns:1fr;
+}
+
+.profile img{
+width:50px;
+height: 50px;
+}
+.albulm h3{
+font-size:1rem;
+}
+img{}
+}	
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Darlington's Stitches</h1>
+  </header>
+
+  <section class="profile">
+    <img src="profile.jpg" alt="Tailor Profile">
+    <h2>Darlington Ochagana</h2>
+    <p>Professional tailor offering quality bespoke clothing for men. Based in Lokoja, Nigeria.</p>
+  </section>
+
+  <section class="gallery">
+    <div class="album" onclick="toggleAlbum(this)">
+      <img src="male T.jpeg" alt="Female Wears Preview">
+      <h3>Male Trads</h3>
+      <div class="album-photos">
+        <img src="male T1.jpeg" alt="Female Wear 1">
+        <img src="male T2.jpeg" alt="Female Wear 2">
+      </div>
+    </div>
+
+    <div class="album" onclick="toggleAlbum(this)">
+      <img src="button down.jpeg" alt="Male Wears Preview">
+      <h3>Button Down</h3>
+      <div class="album-photos">
+        <img src="button down1.jpeg" alt="Male Wear 1">
+        <img src="button down2.jpeg" alt="Male Wear 2">
+      </div>
+    </div>
+
+    <div class="album" onclick="toggleAlbum(this)">
+      <img src="trouser.jpeg" alt="Bridal Wears Preview">
+      <h3> Trousers </h3>
+      <div class="album-photos">
+        <img src="trouser 1.jpeg" alt="Bridal Wear 1">
+        <img src="trouser 2.jpeg" alt="Bridal Wear 2">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Contact: 07059965955 | yourEmail@gmail.com</p> <br>
+    <p><a href="https://wa.me/07059965955" style="color: white; background-color:#2c3e50; text-decoration: none; border-radius: 8px; padding:10px 16px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); ">Chat on WhatsApp</a></p>
+  </footer>
+
+  <script>
+    function toggleAlbum(album) {
+      const photos = album.querySelector('.album-photos');
+      photos.style.display = photos.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
